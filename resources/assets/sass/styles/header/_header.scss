@@ -1,0 +1,8 @@
+header#main-header {
+  border-bottom: 2px solid $header-border-color;
+  &.fixed {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+  }
+}
