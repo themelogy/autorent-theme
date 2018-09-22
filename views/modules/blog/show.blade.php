@@ -9,9 +9,7 @@
             <div class="col-md-9">
                 <div class="article post mb10">
                     <header class="post-header">
-                        <a class="hover-img" href="{{ $post->url }}">
-                            <img src="{{ $post->present()->firstImage(800,300,'fit',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" /><i class="fa fa-link box-icon-# hover-icon round"></i>
-                        </a>
+                        <img src="{{ $post->present()->firstImage(800,null,'resize',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" />
                     </header>
                     <div class="post-inner pb10">
                         <h4 class="post-title"><a class="text-darken" href="{{ $post->url }}">{{ $post->title }}</a></h4>

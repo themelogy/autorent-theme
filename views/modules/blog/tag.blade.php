@@ -14,7 +14,7 @@
                 {!! $posts->links('blog::pagination.default') !!}
             </div>
             <div class="col-md-3">
-                @include('blog::partials.sidebar')
+                @include('blog::partials.sidebar', ['share'=>true])
             </div>
         </div>
     </div>

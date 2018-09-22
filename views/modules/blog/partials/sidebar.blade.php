@@ -2,7 +2,9 @@
     @blogCategories()
     @blogLatestPosts(4, 'sidebar-latest-posts')
     @blogArchive()
-    @include('blog::widgets.share')
+    @isset($share)
+        @include('blog::widgets.share')
+    @endisset
     @isset($post)
         @blogTags($post, 5)
     @endisset
