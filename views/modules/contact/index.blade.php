@@ -1,9 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container">
-    </div>
-    @include('contact::map')
+    @component('partials.components.title', ['breadcrumbs'=>'contact'])
+        <h1 class="title">{{ trans('themes::contact.title') }}</h1>
+    @endcomponent
     <div class="container">
         <div class="gap"></div>
         <div class="row">
@@ -18,9 +18,9 @@
                         </li>
                         <li>
                             <h5>Telefon</h5>
-                            <a href="tel:{{ setting('theme::phone') }}">{{ setting('theme::phone') }}</a><br/>
-                            <a href="tel:{{ setting('theme::phone2') }}">{{ setting('theme::phone2') }}</a><br/>
-                            <a href="tel:{{ setting('theme::mobile') }}">{{ setting('theme::mobile') }}</a>
+                            <a href="tel:{{ setting('theme::phone') }}"><i class="fa fa-phone mr5"></i>{{ setting('theme::phone') }}</a><br/>
+                            <a href="tel:{{ setting('theme::phone2') }}"><i class="fa fa-mobile mr5"></i> {{ setting('theme::phone2') }}</a><br/>
+                            <a href="tel:{{ setting('theme::mobile') }}"><i class="fa fa-mobile mr5"></i> {{ setting('theme::mobile') }}</a>
                         </li>
                         <li>
                             <h5>Adres</h5><address><b>{{ setting('theme::company-name') }}</b><br />{!! setting('theme::address') !!}</address>
@@ -31,4 +31,5 @@
         </div>
         <div class="gap"></div>
     </div>
+    @include('contact::map')
 @endsection

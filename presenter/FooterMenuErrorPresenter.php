@@ -2,14 +2,14 @@
 
 use Nwidart\Menus\Presenters\Presenter;
 
-class FooterMenuPresenter extends Presenter
+class FooterMenuErrorPresenter extends Presenter
 {
     /**
      * {@inheritdoc }.
      */
     public function getOpenTagWrapper()
     {
-        return PHP_EOL.'<ul>'.PHP_EOL;
+        return PHP_EOL.'<ul class="footer-links">'.PHP_EOL;
     }
 
     /**

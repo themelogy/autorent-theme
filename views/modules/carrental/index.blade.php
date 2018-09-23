@@ -69,6 +69,8 @@
             <div class="col-md-3">
                 <aside class="booking-filters">
                     @carClasses()
+                    <hr/>
+                    @carBrands()
                 </aside>
             </div>
             <div class="col-md-9">
@@ -89,13 +91,13 @@
 
                     <ul class="nav-drop-menu">
                         @foreach($sortList->all() as $sort)
-                            <li>{!! link_to_route('carrental.index', $sort['name'], ['sort'=>$sort['key'], 'dir'=>$sort['dir'], 'category'=>request()->get('category')]) !!}</li>
+                            <li>{!! link_to_route('carrental.index', $sort['name'], ['sort'=>$sort['key'], 'dir'=>$sort['dir'], 'category'=>request()->get('category'), 'brand'=>request()->get('brand')]) !!}</li>
                         @endforeach
                     </ul>
                 </div>
                 <div class="pull-right">({{ $cars->total() }} araç bulundu)</div>
                 <ul class="booking-list">
-                    @foreach($cars as $car)
+                    @forelse($cars as $car)
                     <li>
                         <a class="booking-item" href="{{ $car->url }}">
                             <div class="row">
@@ -125,15 +127,21 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3"><span class="booking-item-price">{{ $car->present()->price }}</span> <span>TL/gün</span>
-                                    @if($reservation->total_day > 1)
+                                    @isset($reservation->total_day)
                                     <p>{{ $reservation->total_day }} Gün - {{ $car->present()->total_price }}</p>
-                                    @endif
-                                    <span class="btn btn-xs btn-primary">İncele</span>
+                                    @endisset
+                                    <span class="btn btn-xs btn-primary">Kirala</span>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    @endforeach
+                    @empty
+                        <div class="alert alert-warning">
+                            <button class="close" type="button" data-dismiss="alert"><span aria-hidden="true">×</span>
+                            </button>
+                            <p class="text-small">Araç Bulunamadı.</p>
+                        </div>
+                    @endforelse
                 </ul>
                 <div class="row">
                     <div class="col-md-12">

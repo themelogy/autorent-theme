@@ -1,5 +1,5 @@
 @if ($breadcrumbs)
-    <ol>
+    <ol class="pull-left">
         <li><a href="{{ route('homepage') }}"><i class="fa fa-chevron-right"></i></a></li>
         @foreach ($breadcrumbs as $crumb)
             <?php
@@ -15,4 +15,7 @@
             @endif
         @endforeach
     </ol>
+    @if(strpos(Request::server('HTTP_REFERER'), Request::root()) !== false)
+        <a class="btn btn-default btn-xs pull-right" href="{{ Request::server('HTTP_REFERER') }}"><i class="fa fa-angle-left"></i></a>
+    @endif
 @endif

@@ -24,7 +24,7 @@
                         </div>
                     </div>
                 </div>
-                {!! Menu::render('footer', \Themes\Artevents\Presenter\FooterMenuPresenter::class) !!}
+                {!! Menu::render('footer', \Themes\Autorent\Presenter\FooterMenuErrorPresenter::class) !!}
             </div>
         </div>
     </div>

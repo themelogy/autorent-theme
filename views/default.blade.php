@@ -8,6 +8,8 @@
     <div class="page-content">
         <div class="container">
             {!! $page->body !!}
+
+            @pageTags($page, 5)
         </div>
     </div>
 @stop
