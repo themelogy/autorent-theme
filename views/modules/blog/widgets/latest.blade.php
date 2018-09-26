@@ -7,7 +7,7 @@
                 <div class="thumb">
                     <header class="thumb-header">
                         <a class="hover-img curved" href="{{ $post->url }}">
-                            <img src="{{ $post->present()->firstImage(800,600,'fit',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
+                            <img class="img-responsive" src="{{ $post->present()->firstImage(800,600,'fit',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
                         </a>
                     </header>
                     <div class="thumb-caption">
