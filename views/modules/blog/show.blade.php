@@ -26,7 +26,6 @@
             </div>
             <div class="col-md-4">
                 @include('blog::partials.sidebar')
-                @carFindByOptions('settings.show_home', 'blog')
             </div>
         </div>
     </div>

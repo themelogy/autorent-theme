@@ -2,7 +2,7 @@
 
 return [
     'title'         => 'Blog',
-    'description'   => 'Projeler hakkında son yazılar',
+    'description'   => 'Araç Kiralama hakkında son bilgiler',
     'author posts'  => ':author yazıları',
     'recent posts'  => 'Son Yazılar',
     'other news'    => 'Diğer Yazılar',

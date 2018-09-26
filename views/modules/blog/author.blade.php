@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-    @component('partials.components.title', ['breadcrumbs'=>'blog.category'])
-        <h1 class="title">{{ $category->name }}</h1>
+    @component('partials.components.title', ['breadcrumbs'=>'blog.author'])
+        <h1 class="title">{{ trans('themes::blog.author posts', ['author'=>$author->fullname]) }}</h1>
     @endcomponent
     <div class="container mt30">
         <div class="row">

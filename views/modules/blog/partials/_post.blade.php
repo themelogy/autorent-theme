@@ -1,7 +1,7 @@
 <div class="article post">
     <header class="post-header">
         <a class="hover-img" href="{{ $post->url }}">
-            <img src="{{ $post->present()->firstImage(800,300,'fit',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" /><i class="fa fa-link box-icon-# hover-icon round"></i>
+            <img src="{{ $post->present()->firstImage(360,null,'resize',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" /><i class="fa fa-link box-icon-# hover-icon round"></i>
         </a>
     </header>
     <div class="post-inner">
@@ -9,7 +9,7 @@
         <ul class="post-meta">
             <li><i class="fa fa-th-large"></i> <a href="{{ $post->category->url }}">{{ $post->category->name }}</a></li>
             <li><i class="fa fa-calendar"></i> <a href="#">{{ $post->created_at->formatLocalized('%d %B %Y') }}</a></li>
-            <li><i class="fa fa-user"></i> <a href="#">{{ $post->author->fullname }}</a></li>
+            <li><i class="fa fa-user"></i> <a href="{{ $post->present()->authorUrl }}">{{ $post->author->fullname }}</a></li>
         </ul>
         <p class="post-desciption">{!! strip_tags($post->intro) !!}</p><a class="btn btn-xs btn-primary" href="{{ $post->url }}">{{ trans('global.buttons.read more') }}</a>
     </div>

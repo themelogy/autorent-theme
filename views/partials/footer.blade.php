@@ -3,11 +3,9 @@
     <div class="container">
         <div class="row row-wrap">
             <div class="col-md-3">
-
-                <a class="logo" href="index.html">
+                <a class="logo" href="{{ LaravelLocalization::getLocalizedURL(locale(), route('homepage')) }}">
                     <img src="{{ Theme::url('img/logo/logo-rw.svg') }}" alt="Image Alternative text" title="Image Title" />
                 </a>
-
                 <address>
                     <strong>{{ setting('theme::company-name') }}</strong><br>
                     {{ setting('theme::address') }}<br>
@@ -16,7 +14,6 @@
                     <abbr title="Mobil">M:</abbr> <a href="tel:{{ setting('theme::phone2') }}">{{ setting('theme::phone2') }}</a><br/>
                     <abbr title="E-mail">E:</abbr> <a href="mail:{{ setting('theme::email') }}">{{ setting('theme::email') }}</a>
                 </address>
-
                 @include('partials.components.socials', ['listClass'=>'list list-horizontal list-space social', 'iconClass'=>'box-icon-normal round animate-icon-bottom-to-top'])
             </div>
             <div class="col-md-9">
