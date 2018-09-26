@@ -32,6 +32,7 @@
                 <p class="booking-item-payment-date-weekday">{{ $reservation->drop_at->formatLocalized('%A') }}</p>
                 <p class="booking-item-payment-date-hour"><small>{{ $reservation->drop_at->format('H:i') }}</small></p>
             </div>
+            <a class="pull-right btn btn-xs btn-default" href="{{ $car->url }}"><i class="fa fa-calendar"></i> Tarih Değiştir</a>
         </li>
         <li>
             <table class="table table-hover mb0">
