@@ -1,0 +1,164 @@
+.navbar {
+  //padding: 5px 0;
+  min-height: 0;
+  margin: 0;
+  .navbar-header {
+    .logo {
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-header {
+    float: none;
+    .logo {
+      padding: 10px 0;
+      margin: auto;
+      text-align: center;
+    }
+  }
+  ul.slimmenu {
+    text-align: left;
+  }
+}
+
+@media (min-width: 991px) {
+  .navbar-header {
+    position: relative;
+    .logo {
+      background-color: $white;
+      position: absolute;
+      top:-20px;
+      left:-20px;
+      height: 100px;
+      padding: 20px 25px 25px;
+      z-index: 10;
+      @include box-shadow(0,2px,5px,$logo-border-color);
+      @include border-radius(5px);
+      //border: 2px solid lighten($logo-border-color, 50%);
+    }
+  }
+}
+
+.search-form {
+  background-color: $white;
+  @include border-radius(10px 10px 10px 10px);
+  h2 {
+    font-size: 1.5em;
+    padding: 20px 30px 15px 30px;
+    background-color: $gray;
+    font-weight: 400;
+    @include border-radius(10px 10px 0 0);
+    @include box-shadow(0,1px,1px,rgba($darkgray,0.5));
+  }
+  form {
+    input, textarea {
+      @include border-radius(5px);
+    }
+    padding: 10px 30px 30px;
+    label {
+      font-size: 14px !important;
+    }
+  }
+}
+
+.top-user-area {
+  .socials {
+    li a {
+      color: $top-social-link-color;
+      &:hover {
+        color: $top-social-link-hover;
+      }
+    }
+  }
+}
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-selection--single {
+  height: 35px !important;
+  width: 100%;
+  border-color: darken($gray, 20%) !important;
+  .select2-selection__rendered, .select2-selection__arrow {
+    line-height: 35px !important;
+    height: 35px !important;
+    width: 100%;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $default-theme-color !important;
+}
+
+.form-control, .select2-selection--single {
+  @include box-shadow(0,0,10px,rgba($black,0.1),true);
+}
+
+.font-theme-color {
+  color: $default-theme-color;
+}
+
+.font-bold {
+  font-weight: 500;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.page-title {
+  padding: 30px 0 10px 0 !important;
+  margin: 0 !important;
+  background-color: $default-theme-color;
+  .title {
+    color: $white;
+    font-size: 0.45em;
+    letter-spacing: -0.03em;
+  }
+}
+
+.page-content {
+  padding: 20px 0;
+}
+
+.blog-posts {
+  .thumb-title {
+    font-size: 1em;
+  }
+  .thumb-desc {
+    font-size: 0.75em;
+  }
+}
+
+.booking-item-features.detail {
+  clear: both;
+  width: 100%;
+  li {
+    margin-right: 20px;
+  }
+  i {
+    float: left;
+    margin-right: 5px;
+  }
+  span {
+    display: inline-block;
+    padding: 0 0 5px;
+    float: left;
+    line-height: 35px;
+  }
+}
+.booking-item-price {
+  font-size: 2em;
+}
+
+.booking-item-car-title {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.booking-filters {
+  h3 {
+    font-size: 2em;
+  }
+}

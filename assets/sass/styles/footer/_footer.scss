@@ -1,0 +1,76 @@
+footer#main-footer {
+  background: $footer-bg-color;
+  padding: 60px 0 0 0;
+  color: #e6e6e6;
+  font-size: 11px;
+  line-height: 1.4em;
+  .logo {
+    margin-bottom: 15px;
+    img {
+      width: 100% !important;
+    }
+    @media (max-width: 991px) {
+      img {
+        width: 300px !important;
+      }
+    }
+  }
+  a, h1, h2, h3, h4, h5 {
+    color: #fff;
+  }
+  .form-control {
+    background: #121212;
+    border-color: #000;
+    color: #fff;
+    &:focus {
+      border-color: #ed8323;
+    }
+  }
+  .footer-bottom {
+    padding: 20px 0 10px 0;
+    border-top: 1px solid $footer-border-color;
+    background-color: $footer-bottom-bg-color;
+    position: relative;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: darken($footer-border-color, 10%);
+      position: absolute;
+      top:-2px;
+    }
+    @media (min-width: 991px) {
+      [class*="col"] {
+        padding: 0;
+      }
+    }
+    p {
+      font-size: 10px;
+      line-height: 16px;
+      color: $darkgray !important;
+    }
+  }
+  .social li a {
+    font-size: 1.2em;
+  }
+}
+
+.list-footer > li {
+  margin-bottom: 5px;
+  a {
+    position: relative;
+    padding-left: 15px;
+    &:before {
+      content: "\f105";
+      font-family: "FontAwesome", sans-serif;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left:0;
+      top:2px;
+    }
+  }
+  > a:hover {
+    text-decoration: underline;
+  }
+}

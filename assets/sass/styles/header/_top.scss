@@ -1,0 +1,19 @@
+
+.header-top {
+  padding: 0;
+  background: $top-bg;
+  height: 40px;
+}
+
+@media (max-width: 992px) {
+  .header-top {
+    max-height: none;
+  }
+}
+
+.logo {
+  display: block;
+  img {
+    width: auto;
+  }
+}
