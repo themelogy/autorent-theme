@@ -11,6 +11,6 @@
             <li><i class="fa fa-calendar"></i> <a href="#">{{ $post->created_at->formatLocalized('%d %B %Y') }}</a></li>
             <li><i class="fa fa-user"></i> <a href="{{ $post->present()->authorUrl }}">{{ $post->author->fullname }}</a></li>
         </ul>
-        <p class="post-desciption">{!! strip_tags($post->intro) !!}</p><a class="btn btn-xs btn-primary" href="{{ $post->url }}">{{ trans('global.buttons.read more') }}</a>
+        <p class="post-desciption">{!! strip_tags($post->intro) !!}</p><a class="btn btn-xs btn-default" href="{{ $post->url }}">{{ trans('global.buttons.read more') }}</a>
     </div>
 </div>
