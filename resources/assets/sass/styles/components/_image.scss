@@ -14,7 +14,9 @@
 }
 
 img {
-  width: 100%;
+  &.fw {
+    width: 100%;
+  }
   &.origin {
     width: auto;
   }

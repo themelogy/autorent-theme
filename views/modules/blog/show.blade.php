@@ -6,13 +6,12 @@
     @endcomponent
     <div class="container mt30">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <div class="article post mb10">
                     <header class="post-header">
                         <img src="{{ $post->present()->firstImage(800,null,'resize',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" />
                     </header>
                     <div class="post-inner pb10">
-                        <h4 class="post-title"><a class="text-darken" href="{{ $post->url }}">{{ $post->title }}</a></h4>
                         <ul class="post-meta">
                             <li><i class="fa fa-th-large"></i> <a href="{{ $post->category->url }}">{{ $post->category->name }}</a></li>
                             <li><i class="fa fa-calendar"></i> <a href="#">{{ $post->created_at->formatLocalized('%d %B %Y') }}</a></li>
@@ -25,8 +24,9 @@
                 </div>
                 @include('partials.components.share', ['theme'=>'plain'])
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 @include('blog::partials.sidebar')
+                @carFindByOptions('settings.show_home', 'blog')
             </div>
         </div>
     </div>
