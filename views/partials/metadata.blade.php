@@ -4,5 +4,5 @@
 {!! Theme::style('css/bootstrap.css') !!}
 {!! Theme::style('css/font-awesome.css') !!}
 {!! Theme::style('css/icomoon.css') !!}
-{!! Theme::style('css/styles.css') !!}
+{!! Theme::style('css/styles.css?v=10') !!}
 {!! Theme::script('js/modernizr.js') !!}

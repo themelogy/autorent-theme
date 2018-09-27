@@ -130,7 +130,7 @@
                                     @isset($reservation->total_day)
                                     <p>{{ $reservation->total_day }} Gün - {{ $car->present()->total_price }}</p>
                                     @endisset
-                                    <span class="btn btn-xs btn-primary">Kirala</span>
+                                    <span class="btn btn-xs btn-primary">Rezervasyon</span>
                                 </div>
                             </div>
                         </a>

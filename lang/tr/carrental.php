@@ -2,16 +2,17 @@
 
 return [
     'titles'       => [
-        'rental cars'  => 'Kiralık Araçlar',
-        'prices'       => 'Kiralık Araç Fiyatları',
-        'car'          => 'Kiralık :car',
-        'reservations' => 'Kiralık :car',
-        'start price'  => ':price TL\'den başlayan fiyatlar',
-        'loading'      => 'Yükleniyor',
-        'price lists'  => 'Kiralık Araç Fiyat Listesi',
-        'price'        => ':price TL\'den başlayan fiyatlar',
-        'call us now'  => 'Hemen Arayın',
-        'reservation'  => 'Rezervasyon'
+        'rental cars'     => 'Kiralık Araçlar',
+        'prices'          => 'Kiralık Araç Fiyatları',
+        'car'             => 'Kiralık :car',
+        'reservations'    => 'Kiralık :car',
+        'start price'     => ':price TL\'den başlayan fiyatlar',
+        'loading'         => 'Yükleniyor',
+        'price lists'     => 'Kiralık Araç Fiyat Listesi',
+        'price'           => ':price TL\'den başlayan fiyatlar',
+        'call us now'     => 'Hemen Arayın',
+        'reservation'     => 'Rezervasyon',
+        'reservation car' => ':car araç için rezervasyon'
     ],
     'descriptions' => [
         'index'  => 'Ankara\'da bulunan Kiralık araçlarımız sizlere kaliteli hizmet vermektedir',

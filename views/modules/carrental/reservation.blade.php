@@ -2,7 +2,7 @@
 
 @section('content')
     @component('partials.components.title', ['breadcrumbs'=>'carrental.reservation'])
-        <h1 class="title">{{ trans('themes::carrental.titles.reservation') }}</h1>
+        <h1 class="title">{{ trans('themes::carrental.titles.reservation car', ['car'=>$car->fullname]) }}</h1>
     @endcomponent
 
     <div class="container">

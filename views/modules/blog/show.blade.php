@@ -9,7 +9,16 @@
             <div class="col-md-8">
                 <div class="article post mb10">
                     <header class="post-header">
-                        <img src="{{ $post->present()->firstImage(800,null,'resize',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" />
+                        @if($post->files->count()>1)
+                            <div class="fotorama" data-allowfullscreen="true">
+                            @foreach($post->present()->images(800,null,'resize','80') as $image)
+                            <img src="{{ $image }}" alt="{{ $post->title }} {{ $loop->iteration }}" title="{{ $post->title }} {{ $loop->iteration }}" />
+                            @endforeach
+                            </div>
+                            @unset($image)
+                        @else
+                            <img src="{{ $post->present()->firstImage(800,null,'resize',80) }}" alt="{{ $post->title }}" title="{{ $post->title }}" />
+                        @endif
                     </header>
                     <div class="post-inner pb10">
                         <ul class="post-meta">

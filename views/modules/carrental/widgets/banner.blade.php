@@ -2,7 +2,7 @@
     @foreach($cars as $car)
     <div class="bg-holder full">
         <div class="bg-mask"></div>
-        <div class="bg-blur" style="background-image: url({{ Theme::url() }}/img/slider/slide-{{ $loop->iteration }}.jpg)"></div>
+        <div class="bg-blur" style="background-image: url({{ Theme::url() }}/img/slider/slide-{{ $loop->iteration }}.jpg); filter: grayscale(100%);"></div>
         <div class="bg-content">
             <div class="container">
                 <div class="loc-info text-right hidden-xs hidden-sm">
