@@ -1,4 +1,4 @@
-<div id="map-canvas" style="height:300px;"></div>
+<div id="map-canvas" style="height:300px; border-top: 1px solid #ebebeb;"></div>
 @push('js-inline')
     <script>
         function initMap() {

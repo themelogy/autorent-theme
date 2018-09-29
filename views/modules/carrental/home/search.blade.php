@@ -14,18 +14,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group form-group-lg">
-                                        <label>Alış Lokasyonu</label>
-                                        <select name="pickup" class="form-control">
-                                            <option value="1">Ankara</option>
-                                        </select>
+                                        {!! Form::label('start_location', trans('themes::carrental.reservation.start location')) !!}
+                                        {!! Form::select('start_location', CarLocationRepository::all()->pluck('name', 'id'),old('start_location', isset($reservation->start_location) ? $reservation->start_location : ''),['class'=>'selectpicker', 'data-live-search'=>'true', 'data-width'=>'100%', 'data-toggle'=>'tooltip', 'title'=>'select']) !!}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group form-group-lg form-group-icon-left">
-                                        <label>Dönüş Lokasyonu</label>
-                                        <select name="return" class="form-control">
-                                            <option value="1">Ankara</option>
-                                        </select>
+                                        {!! Form::label('return location', trans('themes::carrental.reservation.return location')) !!}
+                                        {!! Form::select('return_location', CarLocationRepository::all()->pluck('name', 'id'),old('return_location', isset($reservation->return_location) ? $reservation->return_location : ''),['class'=>'selectpicker', 'data-live-search'=>'true', 'data-width'=>'100%', 'data-toggle'=>'tooltip', 'title'=>'select']) !!}
                                     </div>
                                 </div>
                             </div>
