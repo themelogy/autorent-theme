@@ -6,7 +6,7 @@
         <div class="bg-content">
             <div class="container">
                 <div class="loc-info text-right hidden-xs hidden-sm">
-                    <img src="{{ $car->present()->firstImage(300,null,'resize',80) }}" alt="{{ $car->present()->fullname }}" />
+                    <img src="{{ $car->present()->firstImage(300,null,'resize',50) }}" alt="{{ $car->present()->fullname }}" />
                     <div class="meta">
                         <h3 class="loc-info-title">{{ trans('themes::carrental.titles.car', ['car'=>$car->fullname]) }}</h3>
                         <div class="prices">{{ trans('themes::carrental.titles.start price', ['price'=>$car->prices->price6]) }}</div>

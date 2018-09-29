@@ -5,18 +5,16 @@
     <style type="text/css">
         h3, table, p {
             font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
-        }
-        .reservation{
             text-align: left;
         }
-        .reservation tr {
+        tr {
             min-width: 300px;
             border-bottom: 1px solid #ccc;
         }
-        .reservation td {
+        td {
             padding: 5px;
         }
-        .reservation th {
+        table th {
         	text-align: left;
         }
     </style>

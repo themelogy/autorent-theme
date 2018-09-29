@@ -9,17 +9,16 @@
 {!! Theme::script('js/bootstrap-timepicker.js') !!}
 {!! Theme::script('js/nicescroll.js') !!}
 {!! Theme::script('js/dropit.js') !!}
-{!! Theme::script('js/ionrangeslider.js') !!}
+{{-- {!! Theme::script('js/ionrangeslider.js') !!} --}}
 {!! Theme::script('js/icheck.js') !!}
 {!! Theme::script('js/fotorama.js') !!}
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 {!! Theme::script('js/typeahead.js') !!}
-{!! Theme::script('js/card-payment.js') !!}
+{{-- {!! Theme::script('js/card-payment.js') !!} --}}
 {!! Theme::script('js/magnific.js') !!}
 {!! Theme::script('js/owl-carousel.js') !!}
 {!! Theme::script('js/fitvids.js') !!}
-{!! Theme::script('js/tweet.js') !!}
-{!! Theme::script('js/countdown.js') !!}
+{{-- {!! Theme::script('js/tweet.js') !!} --}}
+{{-- {!! Theme::script('js/countdown.js') !!} --}}
 {!! Theme::script('js/gridrotator.js') !!}
 @stack('js-stack')
 {!! Asset::js() !!}

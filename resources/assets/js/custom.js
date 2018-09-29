@@ -205,15 +205,15 @@ $(document).ready(
 $('.nav-drop').dropit();
 
 
-$("#price-slider").ionRangeSlider({
-    min: 130,
-    max: 575,
-    type: 'double',
-    prefix: "$",
-    // maxPostfix: "+",
-    prettify: false,
-    hasGrid: true
-});
+// $("#price-slider").ionRangeSlider({
+//     min: 130,
+//     max: 575,
+//     type: 'double',
+//     prefix: "$",
+//     // maxPostfix: "+",
+//     prettify: false,
+//     hasGrid: true
+// });
 
 $('.i-check, .i-radio').iCheck({
     checkboxClass: 'i-check',
@@ -276,9 +276,9 @@ $('.booking-item-container').children('.booking-item').click(function(event) {
 });
 
 
-$('.form-group-cc-number input').payment('formatCardNumber');
-$('.form-group-cc-date input').payment('formatCardExpiry');
-$('.form-group-cc-cvc input').payment('formatCardCVC');
+// $('.form-group-cc-number input').payment('formatCardNumber');
+// $('.form-group-cc-date input').payment('formatCardExpiry');
+// $('.form-group-cc-cvc input').payment('formatCardCVC');
 
 
 $('.card-select > li').click(function() {
@@ -341,35 +341,35 @@ $(document).ready(function() {
     $("body").fitVids();
 });
 
-$(function($) {
-    $("#twitter").tweet({
-        username: "remtsoy", //!paste here your twitter username!
-        count: 3
-    });
-});
+// $(function($) {
+//     $("#twitter").tweet({
+//         username: "remtsoy", //!paste here your twitter username!
+//         count: 3
+//     });
+// });
 
-$(function($) {
-    $("#twitter-ticker").tweet({
-        username: "remtsoy", //!paste here your twitter username!
-        page: 1,
-        count: 20
-    });
-});
+// $(function($) {
+//     $("#twitter-ticker").tweet({
+//         username: "remtsoy", //!paste here your twitter username!
+//         page: 1,
+//         count: 20
+//     });
+// });
 
-$(document).ready(function() {
-    var ul = $('#twitter-ticker').find(".tweet-list");
-    var ticker = function() {
-        setTimeout(function() {
-            ul.find('li:first').animate({
-                marginTop: '-4.7em'
-            }, 850, function() {
-                $(this).detach().appendTo(ul).removeAttr('style');
-            });
-            ticker();
-        }, 5000);
-    };
-    ticker();
-});
+// $(document).ready(function() {
+//     var ul = $('#twitter-ticker').find(".tweet-list");
+//     var ticker = function() {
+//         setTimeout(function() {
+//             ul.find('li:first').animate({
+//                 marginTop: '-4.7em'
+//             }, 850, function() {
+//                 $(this).detach().appendTo(ul).removeAttr('style');
+//             });
+//             ticker();
+//         }, 5000);
+//     };
+//     ticker();
+// });
 $(function() {
     $('#ri-grid').gridrotator({
         rows: 4,
