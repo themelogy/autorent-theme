@@ -20,7 +20,7 @@
                                     @endif
                                     <div class="caption">
                                         <h4 class="title"><a href="{{ $page->url }}">{{ $page->title }}</a></h4>
-                                        <p>{!! ucfirst(Str::words(Str::replaceFirst('transfer', $tag->name.' ', strip_tags(strtolower(html_entity_decode($page->body)))), 20)) !!}</p>
+                                        <p>{!! ucfirst(str_sentence(Str::replaceFirst(Str::words($tag->name, 1, ''), $tag->name.' ', strip_tags(strtolower(html_entity_decode($page->body)))), 1)) !!}</p>
                                     </div>
                                 </div>
                             </div>

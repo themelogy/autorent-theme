@@ -1,8 +1,16 @@
 @extends('layouts.master')
 
+@php
+    $page = Page::findBySlug('kiralik-arac-fiyatlari');
+@endphp
+
 @section('content')
     @component('partials.components.title', ['breadcrumbs'=>'carrental.prices'])
-        <h1 class="title">{{ trans('themes::carrental.titles.prices') }}</h1>
+        @if($page)
+            <h1 class="title">{{ $page->meta_title ?? $page->title }}</h1>
+        @else
+            <h1 class="title">{{ trans('themes::carrental.titles.prices') }}</h1>
+        @endif
     @endcomponent
     <div class="gap"></div>
     <div class="container">
@@ -38,6 +46,9 @@
                 </table>
             </div>
         </div>
+        @if($page)
+        @pageTags($page, 5)
+        @endif
     </div>
     <div class="gap"></div>
 @endsection
