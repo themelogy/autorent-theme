@@ -5,6 +5,14 @@
         {{ Session::get('success') }}
     </div>
 @endif
+@if(Session::has('errors'))
+    <div class="alert alert-danger fade in alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        @foreach($errors->all() as $error)
+            <span style="font-size: 11px;">{{ $error }}</span>
+        @endforeach
+    </div>
+@endif
 {!! Form::open(['route'=>'carrental.reservation.create', 'method'=>'post']) !!}
 {!! Form::hidden('car_id', Request::get('car_id')) !!}
 <div class="row">

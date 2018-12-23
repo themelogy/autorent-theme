@@ -1,6 +1,15 @@
 <div class="top-user-area clearfix">
     <ul class="top-user-area-list list list-horizontal list-border socials">
         <li>
+            <div class="top-phone">
+                @php
+                    preg_match_all('!\d+!', setting('theme::whatsapp'), $what);
+                    $whatsapp = collect($what[0])->implode('');
+                @endphp
+                <a rel="nofollow" target="_blank" href="https://wa.me/{{ $whatsapp }}?text={{ urlencode('Merhaba araç kiralamak istiyorum') }}"><i class="fa fa-whatsapp mr5"></i> {{ setting('theme::whatsapp') }}</a>
+            </div>
+        </li>
+        <li>
             @include('partials.components.socials', ['listClass'=>'list list-horizontal list-space', 'iconClass'=>''])
         </li>
         @auth

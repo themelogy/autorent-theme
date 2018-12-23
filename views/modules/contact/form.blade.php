@@ -6,6 +6,10 @@
         @{{ successMessage }}
     </div>
 
+    <div class="alert alert-danger" role="alert" v-show="errors">
+        <span v-for="error in errors"><span v-for="er in error">@{{ er }}</span></span>
+    </div>
+
     {!! Form::open(['v-on:submit'=>'submitForm', 'class' => 'contact', 'method'=>'post', 'v-show'=>'!success']) !!}
     {!! Form::hidden('from', Request::path()) !!}
 
