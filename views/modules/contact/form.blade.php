@@ -89,7 +89,7 @@
                     enquiry: '',
                     captcha_contact: ''
                 },
-                errors: {},
+                errors: false,
                 success: false,
                 successMessage: ''
             },
