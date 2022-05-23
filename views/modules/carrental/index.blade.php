@@ -156,46 +156,49 @@
 
 @push('js-stack')
     {!! Theme::style('vendor/select2/css/select2.min.css') !!}
-    {!! Theme::script('vendor/select2/js/select2.min.js') !!}
+    {!! Theme::script('vendor/select2/js/select2.min.js', ['defer']) !!}
+    <script src="{{ mix('/themes/autorent/js/datetime.min.js') }}" defer></script>
 @endpush
 
 @push('js-inline')
-    <script>
-        (function () {
-            $('.date-pick').datepicker({
-                todayHighlight: true,
-                language: "tr",
-                format: 'dd.mm.yyyy',
-                startDate: new Date()
-            });
+    <script async>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            (function () {
+                $('.date-pick').datepicker({
+                    todayHighlight: true,
+                    language: "tr",
+                    format: 'dd.mm.yyyy',
+                    startDate: new Date()
+                });
 
-            var pick_at = $('input[name="pick_at"]');
-            var drop_at = $('input[name="drop_at"]');
+                var pick_at = $('input[name="pick_at"]');
+                var drop_at = $('input[name="drop_at"]');
 
-            function dropMinDate() {
-                var start_at = new Date(pick_at.datepicker('getDate'));
-                start_at.setDate(start_at.getDate()+1);
-                drop_at.datepicker('setStartDate', start_at);
-                drop_at.datepicker('setDate', start_at);
-            }
+                function dropMinDate() {
+                    var start_at = new Date(pick_at.datepicker('getDate'));
+                    start_at.setDate(start_at.getDate() + 1);
+                    drop_at.datepicker('setStartDate', start_at);
+                    drop_at.datepicker('setDate', start_at);
+                }
 
-            pick_at.datepicker().on('changeDate', function () {
-                dropMinDate();
-                $(this).datepicker('hide');
-            });
+                pick_at.datepicker().on('changeDate', function () {
+                    dropMinDate();
+                    $(this).datepicker('hide');
+                });
 
-            drop_at.datepicker().on('changeDate', function () {
-                $(this).datepicker('hide');
-            });
+                drop_at.datepicker().on('changeDate', function () {
+                    $(this).datepicker('hide');
+                });
 
 
-            $('input.time-pick').timepicker({
-                minuteStep: 15,
-                showInpunts: false,
-                showMeridian: false
-            });
+                $('input.time-pick').timepicker({
+                    minuteStep: 15,
+                    showInpunts: false,
+                    showMeridian: false
+                });
 
-            $('select').select2();
-        })(jQuery);
+                $('select').select2();
+            })(jQuery);
+        });
     </script>
 @endpush

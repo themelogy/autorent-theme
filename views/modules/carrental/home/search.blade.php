@@ -70,11 +70,13 @@
 
 @push('js-stack')
     {!! Theme::style('vendor/select2/css/select2.min.css') !!}
-    {!! Theme::script('vendor/select2/js/select2.min.js') !!}
+    {!! Theme::script('vendor/select2/js/select2.min.js', ['defer']) !!}
+    <script src="{{ mix('/themes/autorent/js/datetime.min.js') }}" defer></script>
 @endpush
 
 @push('js-inline')
-    <script>
+    <script async>
+        document.addEventListener("DOMContentLoaded", function(event) {
         (function () {
             $('.date-pick').datepicker({
                 todayHighlight: true,
@@ -111,5 +113,6 @@
 
             $('select').select2();
         })(jQuery);
+        });
     </script>
 @endpush

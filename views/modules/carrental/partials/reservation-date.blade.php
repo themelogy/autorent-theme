@@ -49,35 +49,38 @@
 
 @push('js-stack')
     {!! Theme::style('vendor/select2/css/select2.min.css') !!}
-    {!! Theme::script('vendor/select2/js/select2.min.js') !!}
+    {!! Theme::script('vendor/select2/js/select2.min.js', ['defer']) !!}
+    <script src="{{ mix('/themes/autorent/js/datetime.min.js') }}" defer></script>
 @endpush
 
 @push('js-inline')
-    <script>
-        (function () {
-            $('input.date-pick, .input-daterange, .date-pick-inline').datepicker({
-                todayHighlight: true,
-                language: "tr",
-                format: 'dd.mm.yyyy',
-                startDate: new Date()
-            });
+    <script async>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            (function () {
+                $('input.date-pick, .input-daterange, .date-pick-inline').datepicker({
+                    todayHighlight: true,
+                    language: "tr",
+                    format: 'dd.mm.yyyy',
+                    startDate: new Date()
+                });
 
-            $('input.date-pick, .input-daterange input[name="pick_at"]').datepicker().on('changeDate', function () {
-                $(this).datepicker('hide');
-                $('.input-daterange input[name="drop_at"]').datepicker("show");
-            });
+                $('input.date-pick, .input-daterange input[name="pick_at"]').datepicker().on('changeDate', function () {
+                    $(this).datepicker('hide');
+                    $('.input-daterange input[name="drop_at"]').datepicker("show");
+                });
 
-            $('.input-daterange input[name="drop_at"]').datepicker().on('changeDate',function () {
-                $(this).datepicker('hide');
-            });
+                $('.input-daterange input[name="drop_at"]').datepicker().on('changeDate', function () {
+                    $(this).datepicker('hide');
+                });
 
-            $('input.time-pick').timepicker({
-                minuteStep: 15,
-                showInpunts: false,
-                showMeridian: false
-            });
+                $('input.time-pick').timepicker({
+                    minuteStep: 15,
+                    showInpunts: false,
+                    showMeridian: false
+                });
 
-            $('select').select2();
-        })(jQuery);
+                $('select').select2();
+            })(jQuery);
+        });
     </script>
 @endpush

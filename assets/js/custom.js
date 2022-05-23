@@ -1,5 +1,9 @@
 "use strict";
 
+$(document).ready(function(){
+   $('img').unveil();
+});
+
 $('ul.slimmenu').slimmenu({
     resizeWidth: '992',
     collapserTitle: 'Menu',
@@ -255,11 +259,6 @@ $('.booking-item-container').children('.booking-item').click(function(event) {
         });
     }
 });
-
-
-// $('.form-group-cc-number input').payment('formatCardNumber');
-// $('.form-group-cc-date input').payment('formatCardExpiry');
-// $('.form-group-cc-cvc input').payment('formatCardCVC');
 
 
 $('.card-select > li').click(function() {
