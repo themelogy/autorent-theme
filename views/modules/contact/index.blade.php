@@ -14,16 +14,18 @@
                 <aside class="sidebar-right">
                     <ul class="address-list list">
                         <li>
-                            <h5>E-Posta</h5><a href="mailto:{!! Html::email(setting('theme::email')) !!}">{!! Html::email(setting('theme::email')) !!}</a>
+                            <h5><i class="fa fa-envelope"></i> E-Posta</h5>
+                            <a href="mailto:{!! Html::email(setting('theme::email')) !!}">{!! Html::email(setting('theme::email')) !!}</a>
                         </li>
                         <li>
-                            <h5>Telefon</h5>
-                            <a href="tel:{{ setting('theme::phone') }}"><i class="fa fa-phone mr5"></i>{{ setting('theme::phone') }}</a><br/>
-                            <a href="tel:{{ setting('theme::phone2') }}"><i class="fa fa-mobile mr5"></i> {{ setting('theme::phone2') }}</a><br/>
-                            <a href="tel:{{ setting('theme::mobile') }}"><i class="fa fa-mobile mr5"></i> {{ setting('theme::mobile') }}</a>
+                            <h5><i class="fa fa-phone"></i> Telefon</h5>
+                            <a href="tel:{{ setting('theme::phone') }}">{{ setting('theme::phone') }}</a><br/>
+                            <a href="tel:{{ setting('theme::phone2') }}">{{ setting('theme::phone2') }}</a><br/>
+                            <a href="tel:{{ setting('theme::mobile') }}">{{ setting('theme::mobile') }}</a>
                         </li>
                         <li>
-                            <h5>Adres</h5><address><b>{{ setting('theme::company-name') }}</b><br />{!! setting('theme::address') !!}</address>
+                            <h5><i class="fa fa-map-marker"></i> Adres</h5>
+                            <address><b>{{ setting('theme::company-name') }}</b><br />{!! setting('theme::address') !!}</address>
                         </li>
                     </ul>
                 </aside>

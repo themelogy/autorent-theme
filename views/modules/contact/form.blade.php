@@ -66,9 +66,9 @@
 </div>
 
 @push('js-stack')
-    {!! Theme::script('vendor/vue/dist/vue.min.js') !!}
-    {!! Theme::script('vendor/axios/dist/axios.min.js') !!}
-    {!! Theme::script('vendor/gasparesganga-jquery-loading-overlay/dist/loadingoverlay.min.js') !!}
+    {!! Theme::script('vendor/vue/vue.min.js') !!}
+    {!! Theme::script('vendor/axios/axios.min.js') !!}
+    {!! Theme::script('vendor/jquery-loading-overlay/loadingoverlay.min.js') !!}
 @endpush
 
 @push('js-inline')

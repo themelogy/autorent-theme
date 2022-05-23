@@ -10,8 +10,8 @@ seo_helper()->setTitle('404 - Sayfa bulunamadı');
             <div class="bg-mask"></div>
             <div class="bg-blur" style="background-image:url({!! Theme::url('img/slider/slide-1.jpg') !!});"></div>
             <div class="bg-holder-content full text-white">
-                <a class="logo-holder" href="index.html">
-                    <img src="{{ Theme::url('img/logo/logo-rw.svg') }}" alt="Image Alternative text" title="Image Title" />
+                <a class="logo-holder" href="{{ url(locale()) }}">
+                    <img src="{{ Theme::url('img/logo/logo-rw.svg') }}" alt="@setting('theme::company-name')" title="Image Title" />
                 </a>
                 <div class="full-center">
                     <div class="container">

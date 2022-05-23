@@ -2,7 +2,7 @@
     @carFindByOptions('settings.show_home', 'blog')
     @blogCategories()
     @blogLatestPosts(4, 'sidebar-latest-posts')
-    @blogArchive()
+{{--    @blogArchive()--}}
     @isset($share)
         @include('blog::widgets.share')
     @endisset

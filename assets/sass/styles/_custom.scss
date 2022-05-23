@@ -26,15 +26,15 @@
   .navbar-header {
     position: relative;
     .logo {
-      background-color: $white;
+      background-color: #fff;
       position: absolute;
-      top:-20px;
+      top:-40px;
       left:-20px;
       height: 100px;
       padding: 20px 25px 25px;
       z-index: 10;
-      @include box-shadow(0,2px,5px,$logo-border-color);
-      @include border-radius(5px);
+      //@include box-shadow(0,2px,5px,$logo-border-color);
+      //@include border-radius(5px);
       //border: 2px solid lighten($logo-border-color, 50%);
     }
   }
@@ -161,4 +161,49 @@
   h3 {
     font-size: 2em;
   }
+}
+
+
+.social-share {
+  div {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+    &:first-child {
+      font-weight: 600;
+    }
+  }
+}
+.jssocials-share {
+  &:first-child .jssocials-share-link  {
+    margin-left: 0;
+  }
+}
+.post-share a {
+  font-size: 12px !important;
+}
+.plain .jssocials-share-logo {
+  font-size: 12px !important;
+}
+.plain .jssocials-share-link {
+  border: 1px solid darken(white, 25%) !important;
+  &:hover {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    i {
+      color: $default-theme-color !important;
+    }
+  }
+}
+
+.post-inner {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.post-desciption {
+  padding-top: 10px !important;
 }

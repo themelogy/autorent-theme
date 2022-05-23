@@ -54,7 +54,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-lg" type="submit">Araçları Göster</button>
+                            <button class="btn btn-primary btn-lg" type="submit">Araçları Listele</button>
                         {!! Form::close() !!}
                     </div>
                 </div>
@@ -69,8 +69,8 @@
 </div>
 
 @push('js-stack')
-    {!! Theme::style('vendor/select2/dist/css/select2.min.css') !!}
-    {!! Theme::script('vendor/select2/dist/js/select2.min.js') !!}
+    {!! Theme::style('vendor/select2/css/select2.min.css') !!}
+    {!! Theme::script('vendor/select2/js/select2.min.js') !!}
 @endpush
 
 @push('js-inline')

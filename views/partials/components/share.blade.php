@@ -1,12 +1,12 @@
 @php
     $theme = isset($theme) ? $theme : 'minima';
-    $layout = 'vendor/jssocials/dist/jssocials-theme-'. $theme .'.css';
+    $layout = 'vendor/jssocials/jssocials-theme-'. $theme .'.css';
 @endphp
 <div id="share" class="{{ $theme }}"></div>
 
 @push('js-stack')
-{!! Asset::add(Theme::url('vendor/jssocials/dist/jssocials.min.js')) !!}
-{!! Asset::add(Theme::url('vendor/jssocials/dist/jssocials.css')) !!}
+{!! Asset::add(Theme::url('vendor/jssocials/jssocials.min.js')) !!}
+{!! Asset::add(Theme::url('vendor/jssocials/jssocials.css')) !!}
 {!! Asset::add(Theme::url($layout)) !!}
 @endpush
 

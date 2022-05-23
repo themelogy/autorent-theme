@@ -54,10 +54,23 @@ aside {
   }
 }
 
-.address-list > li {
-  margin-bottom: 20px;
-  > h5 {
-    margin-bottom: 3px;
+.address-list {
+  > li {
+    margin-bottom: 20px;
+    > h5 {
+      i {
+        font-size: 14px;
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        background-color: $default-theme-color;
+        color: $white;
+        border-radius: 20px;
+        margin-right: 5px;
+      }
+      margin-bottom: 3px;
+    }
   }
 }
 

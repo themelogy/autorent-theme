@@ -1,4 +1,4 @@
-<div class="booking-item-payment mt30">
+<div class="booking-item-payment">
     <header class="clearfix">
         <a class="booking-item-payment-img mt15" href="{{ $car->url }}">
             <img src="{{ $car->present()->firstImage(100,null,'resize',80) }}" alt="{{ $car->fullname }}" title="{{ $car->fullname }}" />
